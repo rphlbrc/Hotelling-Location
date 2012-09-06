@@ -5,7 +5,7 @@ A simple simulator for Hotelling's Location game.
 
 Usage:
 
-./hotelling <upper bound of scale> <number of candidates>
+	./hotelling <upper bound of scale> <number of candidates>
 
 For a scale of 1 to 10, enter 10 as the upper bound. For a scale of 1 to 100, enter 100, etc.
 
