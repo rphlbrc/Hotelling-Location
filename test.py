@@ -19,5 +19,10 @@ class HotellingTest(unittest.TestCase):
         self.assertTrue(hs.parse("u 1 8 9") == 80.0)
         self.assertTrue(hs.parse("u 2 8 9") == 20.0)
 
+    def testDominance(self):
+        hs = HotellingSimulator(10, 2)
+        self.assertTrue(hs.parse("2 dominate? 1") == "strict")
+        self.assertTrue(hs.parse("9 dominate? 10") == "strict")
+
 if __name__ == '__main__':
     unittest.main()
