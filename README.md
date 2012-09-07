@@ -18,3 +18,9 @@ In the same game, to see whether taking position 2 would dominate taking positio
 	2 dominate? 1
 
 The simulator would tell you if the strategy was strictly, weakly or not dominated.
+
+To search through all possibilities and return a list of positions that dominate some position:
+
+	list <strictly or weakly> 1
+
+The simulator would return a list of strategies that either strictly or weakly dominate strategy 1 (depending on which modifier keyword you entered).

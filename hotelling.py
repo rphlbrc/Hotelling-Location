@@ -23,6 +23,23 @@ class HotellingSimulator():
 
             return self.checkDominate(s1, s2)
 
+        elif words[0] == "find":
+            s = int(words[2]) - 1
+            if words[1] == "strictly_dominate" or words[1] == "strictly":
+                return self.find(s, "strictly")
+            elif words[1] == "weakly_dominate" or words[1] == "weakly":
+                return self.find(s, "weakly")
+            else:
+                return "Please use either strictly_dominate or weakly_dominate"
+
+    def find(self, s, modifier):
+        l = []
+        for i in range(len(self.scale)):
+            if i == s: continue
+            if self.checkDominate(i, s) == modifier: l.append(i+1)
+            else: continue
+        return str(l)
+
     def utility(self, p, allPos):
         #print allPos
         total = 0.0 
