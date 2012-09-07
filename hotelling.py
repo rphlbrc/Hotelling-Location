@@ -18,6 +18,7 @@ class HotellingSimulator():
 
     def utility(self, p, allPos):
         total = 0.0 
+        # TODO: there is a much faster linear algorithm for below, which is currently n^2
         for i in range(len(self.scale)):
             best = sys.maxint
             bestC = -1
@@ -31,7 +32,7 @@ class HotellingSimulator():
                 elif diff == best:
                     split += 1
                     if j == p: bestC = j
-            if bestC == p and split > 0: total += 10.0 / float(split)
+            if bestC == p and split > 0: total += (100.0 / float(len(self.scale))) / float(split)
         return total
 
 def main():
